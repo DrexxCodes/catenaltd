@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import "./Hero.css"
+import "./hero.css"
 
 function Hero() {
   const [currentImage, setCurrentImage] = useState(0)

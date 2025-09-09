@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import "./Stats.css"
+import "./stats.css"
 
 function Stats() {
   const [isVisible, setIsVisible] = useState(false)

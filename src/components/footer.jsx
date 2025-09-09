@@ -1,6 +1,6 @@
 "use client"
 
-import "./Footer.css"
+import "./footer.css"
 
 function Footer() {
   const currentYear = new Date().getFullYear()

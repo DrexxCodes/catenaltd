@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import "./Services.css"
+import "./services.css"
 import "boxicons/css/boxicons.min.css" // Import Boxicons CSS
 
 const Services = () => {
