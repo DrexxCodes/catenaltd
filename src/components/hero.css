@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 1s ease-in-out, transform 8s ease-out;
+}
+
+.hero-image.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(44, 44, 42, 0.7) 0%, rgba(232, 77, 59, 0.3) 50%, rgba(44, 44, 42, 0.8) 100%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  color: #ffffff;
+  /* Enhanced text animation on page load */
+  animation: heroTextSlideIn 1.8s ease-out 1.2s both;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(44, 44, 42, 0.8);
+  /* Added individual title animation */
+  animation: heroTitleFade 2s ease-out 1.5s both;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #fefefc;
+  text-shadow: 1px 1px 2px rgba(44, 44, 42, 0.6);
+  /* Added subtitle animation with delay */
+  animation: heroSubtitleSlide 2s ease-out 1.8s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Added buttons animation */
+  animation: heroButtonsAppear 1.5s ease-out 2.2s both;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 180px;
+}
+
+.btn-primary {
+  background: #e84d3b;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(232, 77, 59, 0.3);
+}
+
+.btn-primary:hover {
+  background: #d63c2a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 77, 59, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: #2c2c2a;
+  transform: translateY(-2px);
+}
+
+/* Adding welcome message styles with animated color loop */
+.welcome-message {
+  margin-bottom: 2rem;
+  animation: welcomeSlideIn 2s ease-out 0.5s both;
+}
+
+.welcome-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  animation: colorLoop 4s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.welcome-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.4;
+  margin-bottom: 0;
+  animation: colorLoopSubtle 4s ease-in-out infinite 1s;
+  text-shadow: 0 0 15px rgba(232, 77, 59, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Added new keyframe animations for enhanced text effects */
+@keyframes heroTextSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroTitleFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    letter-spacing: 2px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: normal;
+  }
+}
+
+@keyframes heroSubtitleSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroButtonsAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes welcomeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes colorLoop {
+  0%,
+  100% {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  25% {
+    color: #e84d3b;
+    text-shadow: 0 0 25px rgba(232, 77, 59, 0.8);
+  }
+  50% {
+    color: #ffd700;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+  }
+  75% {
+    color: #00ffff;
+    text-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  }
+}
+
+@keyframes colorLoopSubtle {
+  0%,
+  100% {
+    color: #fefefc;
+    text-shadow: 0 0 15px rgba(254, 254, 252, 0.5);
+  }
+  25% {
+    color: #ffcccc;
+    text-shadow: 0 0 20px rgba(232, 77, 59, 0.4);
+  }
+  50% {
+    color: #fff8dc;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  }
+  75% {
+    color: #e0ffff;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Add top padding to hero content to account for navbar on mobile */
+  .hero-content {
+    padding-top: 80px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Reduce hero text size on mobile for better spacing */
+  .hero-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+}

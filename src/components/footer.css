@@ -1,0 +1,185 @@
+.footer {
+  background: linear-gradient(135deg, #2c2c2a 0%, #1a1a1a 100%);
+  color: #ffffff;
+  padding: 60px 0 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Add footer logo image styling */
+.footer-logo-image {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
+.logo-text {
+  color: #ffffff;
+}
+
+.logo-accent {
+  color: #e84d3b;
+  margin-left: 5px;
+}
+
+.footer-tagline {
+  color: #cccccc;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-column h4 {
+  color: #e84d3b;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 12px;
+}
+
+.footer-column a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-column a:hover {
+  color: #e84d3b;
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  margin-top: 40px;
+}
+
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #e84d3b 50%, transparent 100%);
+  margin-bottom: 30px;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 30px;
+  font-size: 0.9rem;
+}
+
+.copyright {
+  color: #cccccc;
+  margin: 0;
+}
+
+.developer-credit {
+  color: #cccccc;
+  margin: 0;
+}
+
+.developer-name {
+  color: #e84d3b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.developer-name:hover {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 0;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+
+  .footer-tagline {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 15px;
+  }
+
+  .footer-content {
+    gap: 30px;
+  }
+
+  .footer-links {
+    gap: 25px;
+  }
+
+  .footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .footer-column a {
+    font-size: 0.9rem;
+  }
+}
